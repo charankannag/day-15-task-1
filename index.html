@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <!-- IMAGES
+       CSS FILE
+       JAVASCRIPT FILE -->
+    <title>GUVI - HTML5</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <script src="practiece script.js"></script>
+    <style>
+      html {
+        font-size: 10px;
+      }
+ 
+      #container {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="person_form">
+      <div>
+        <label for="name">Enter Name</label>
+        <input
+          id="name"
+          placeholder="Enter Name"
+          onkeyup="handleInputChange(this);"
+        />
+      </div>
+      <div>
+        <label for="email">Enter Email</label>
+        <input
+          id="email"
+          placeholder="Enter Email"
+          onkeyup="handleInputChange(this);"
+        />
+      </div>
+      <div>
+        <label for="gender">Select Gender</label>
+        <div>
+          <label for="male">Male</label>
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            onchange="handleInputChange(this);"
+          />
+        </div>
+        <div>
+          <label for="female">Female</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            onchange="handleInputChange(this);"
+          />
+        </div>
+      </div>
+      <button type="submit" onclick="handleSumbit();">Submit</button>
+    </div>
+    <button type="previous" onclick="handleprevious();">previous</button><button type="1" onclick="handle1();">1</button><button type="2" onclick="handle2();">2</button><button type="3" onclick="handle3();">3</button><button type="4" onclick="handle4();">4</button><button type="5" onclick="handle5();">5</button><button type="6" onclick="handle6();">6</button><button type="next" onclick="handlenext();">next</button>
+    <script>
+      let data = {};
+       const personForm = document.getElementById("person_form");
+       personForm.addEventListener("click", (e) => {
+         e.preventDefault();
+       });
